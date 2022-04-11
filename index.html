@@ -16,10 +16,10 @@
       let random = ["rock", "paper", "scissors"];
       return random[Math.floor(Math.random() * 3)];
     }
-    console.log(userPlay);
-    console.log(computerPlay);
+    userPlay();
+    computerPlay();
 
-    function playRound(playerSelection, computerSelection) { //plays a round of the game.
+    function playAround(playerSelection, computerSelection) { //plays a round of the game.
             if (playerSelection === "rock") {
                 if (computerSelection === "rock") {
                     return "Draw!";
@@ -47,7 +47,14 @@
             }
         }
 
-    console.log(rock, paper);
+playAround();
+
+var userChoice = userPlay();
+var computerSelection = computerPlay();
+var result = playAround(userChoice, computerSelection)
+console.log("user's choice", userChoice);
+console.log("computer's choice", computerSelection);
+console.log("Result is", result);
 
   </script>
 </body>

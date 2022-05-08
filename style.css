@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+header{
+  background-color: black;
+  padding: 20px;
+}
+
+header > h1 {
+  color: white;
+  text-align: center;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.score-board {
+  border: 3px solid black;
+  width: 200px;
+  margin: 20px auto;
+  color: black;
+  font-size: 46px;
+  border-radius: 4px;
+  text-align: center;
+  padding: 15px 20px;
+  font-family: 'Press Start 2P', cursive;
+}

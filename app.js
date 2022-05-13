@@ -22,16 +22,23 @@ function win(user, comp){
  userScore++;
  userScore_span.innerHTML = userScore;
  result_div.innerHTML = `${convert(user)} beats ${convert(comp)}. You win.`;
+ document.getElementById(user).classList.add('green-glow');
+ setTimeout(() => {document.getElementById(user).classList.remove('green-glow')}, 300);
 }
+
 function lose(user, comp){
   computerScore++;
   computerScore_span.innerHTML = computerScore;
   result_div.innerHTML = `${convert(comp)} beats ${convert(user)}. You lose.`;
+  document.getElementById(user).classList.add('red-glow');
+ setTimeout(() => {document.getElementById(user).classList.remove('red-glow')}, 300);
 
 }
-function draw(){
+function draw(user, comp){
   console.log("Draw");
-  result_div.innerHTML = `Draw`;
+  result_div.innerHTML = `${convert(comp)} equals ${convert(user)}. Draw.`;
+  document.getElementById(user).classList.add('gray-glow');
+ setTimeout(() => {document.getElementById(user).classList.remove('gray-glow')}, 300);
 }
 
 function game(userChoice) {
